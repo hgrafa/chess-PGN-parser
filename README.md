@@ -4,13 +4,13 @@ Programa para interpretar e interagir com arquivos `.pgn`, exibindo a partida e 
 
 Etapas atuais:
 
-- [x] Abrir e iterar o arquivo `.pgn` com o programa `.cpp`
-- [ ] Construir Layout base tabuleiro.
-- [ ] Implementar funções de interface com o usuário, como próxima jogada, jogada anterior, sair e resetar a partida.
+1. Abrir e iterar o arquivo `.pgn` com o programa `.cpp`
+2. Construir Layout base do tabuleiro.
+3. Implementar funções de interface com o usuário, como próxima jogada, jogada anterior, sair e resetar a partida.
 
 Problemas atuais:
 
-- [x] Filtrar as tags do PGN e as jogadas, pois na leitura do pgn a biblioteca `fstream` não consegue ler os espaços do `.pgn`.
+1. Filtrar as tags do `.pgn` e as jogadas, pois na leitura do pgn a biblioteca `fstream` não consegue ler os espaços do `.pgn`.
 
 <br>
 
