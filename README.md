@@ -12,10 +12,6 @@ Problemas atuais:
 
 1. Filtrar as tags do `.pgn` e as jogadas, pois na leitura do pgn a biblioteca `fstream` não consegue ler os espaços do `.pgn`.
 
-<br>
-
-------------------------------------------
-<br>
 
 ## Referência: PGN - Portable Game Notation
 ---
