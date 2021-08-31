@@ -14,7 +14,6 @@ Problemas atuais:
 
 
 ## Referência: PGN - Portable Game Notation
----
 Entensão dos arquivos na pasta `game files` usada para descrever propriedades dos jogos usando as ***Seven Tag Roasters*** para indicar as principais informações e mais algumas etiquetas adicionais em algumas das partidas.
 
 A representação do jogo vem logo abaixo utilizando a notação ***movetext***, em particular para estes arquivos no modelo **NAP(Notação Algébrica Padrão)**.
