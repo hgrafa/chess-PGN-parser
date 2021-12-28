@@ -2,15 +2,26 @@
 
 Programa para interpretar e interagir com arquivos `.pgn`, exibindo a partida e podendo ir e voltar entre as jogadas.
 
-### 🟢 Etapas atuais
+## 🟢 Funcionamento do programa
 
-1. Abrir e iterar o arquivo `.pgn` com o programa `.cpp`
-2. Construir Layout base do tabuleiro.
-3. Implementar funções de interface com o usuário, como próxima jogada, jogada anterior, sair e resetar a partida.
+1. `data.h/data.cpp` Criar estruturas capazes de guardar os dados a serem extraídos do `.pgn`.
+2. `catcher.h/catcher.cpp ` Extrair os dados do `.pgn` e alocar nas estruturas já criadas.
+3. `interpteter.h/interpreter.cpp` Interpreta os dados salvos e associa a dados que possam ser exibidos no tabuleiro para o usário. Responsável por chegar xeques e xeque-mates também.
+4. `printer.h/printer.cpp` Printar o tabuleiro e as peças nas respectivas posições.
 
-### 🔴 Problemas atuais
+**plano futuro:** implementar CRUD na interação do usuário.
 
-1. Filtrar as tags do `.pgn` e as jogadas, pois na leitura do pgn a biblioteca `fstream` não consegue ler os espaços do `.pgn`.
+## 🟡 Status dos arquivos
+
+1. `main.cpp`: working ✔️
+2. `data.h/data.cpp` : bug with catcher 🪲
+3. `catcher.h/catcher.cpp `: bug with data 🪲
+4. `interpteter.h/interpreter.cpp`: not implemented
+5. `printer.h/printer.cpp`: working ✔️
+
+## 🔴 Problema atual
+
+Estou tendo multiplas declarações das `stucts` durante o uso das `headers`.
 
 
 ## 💻 Referência: PGN - Portable Game Notation

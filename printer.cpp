@@ -35,8 +35,7 @@ void table(){
       }else if(i==-1){
         print(" ");
         continue;
-      } modelo = not modelo
-
+      } 
       // if(isValidSpace(j, i) and ){ // se for uma posição de peça e tem peça no local
 
       if(modeloLinha){ // branco -> preto -> branco
@@ -63,7 +62,7 @@ void table(){
   // coluna++;
 }
 
-int main(int argc, char const *argv[]){
+int main(){
 
   table();
   
