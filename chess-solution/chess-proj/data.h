@@ -6,12 +6,13 @@
 
 	#include <cstdio>
 	#include <string>
-	#define MAXPLAYS 1000
+
+  const int MAXPLAYS = 300;
 
 // ---------------------------------
 // pre declaring structs
 
-  struct gameSet {
+  struct GameSet {
     // not opicional instances
     std::string event, date, site, white, round, black, result, whiteElo, blackElo, ECO;
 
@@ -20,9 +21,12 @@
     std::string annotator = "", plyCount = "", time = "", termination = "", mode = "";
   };
 
-
-  struct playerSet {
+  struct PlayerSet {
     std::string white, black;
+  };
+
+  struct MoveSet {
+    PlayerSet round[MAXPLAYS];
   };
 
 #endif

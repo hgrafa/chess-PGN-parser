@@ -13,9 +13,9 @@
 
 // ---------------------------------------
 // pré declarando as funções
-	void readPgn(const char* file, gameSet *matchData, playerSet (*moves)[]);
-	void filterTags(std::string line, gameSet *matchData);
-	void filterMoves(std::string line, playerSet (*moves) []);
+	void readPgn(const char* file, GameSet *matchData, MoveSet *moves);
+	void filterTags(std::string line, GameSet *matchData);
+	void filterMoves(std::string line, MoveSet *movements);
 	int whatsTheNumber(std::string numberString);
 
 #endif // !CATCHER_H

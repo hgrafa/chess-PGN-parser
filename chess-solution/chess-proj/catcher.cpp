@@ -6,7 +6,7 @@
 // ---------------------------------
 // filter pgn to catch the seven tag roster
 
-void filterTags(std::string line, gameSet *matchData) {
+void filterTags(std::string line, GameSet *matchData) {
 
   std::string tagName = "", tagValue = "";
   // push back na tagName até ler o espaço
@@ -42,7 +42,7 @@ void filterTags(std::string line, gameSet *matchData) {
 // ---------------------------------
 // filter pgn to catch movetext arguments
 
-void filterMoves(std::string line, playerSet (*moves)[]) {
+void filterMoves(std::string line, MoveSet *movements) {
 
   // transformando string e pegando round atual
   std::string roundNumberString = "";
@@ -57,15 +57,15 @@ void filterMoves(std::string line, playerSet (*moves)[]) {
       roundNumber = whatsTheNumber(roundNumberString);
     }
     else if (isspace(line[i])) haveSpace = true;
-    else if (not haveSpace) (*moves)[roundNumber].white.push_back(line[i]);
-    else if (haveSpace) (*moves)[roundNumber].black.push_back(line[i]);
+    else if (not haveSpace) (*movements).round[roundNumber].white.push_back(line[i]);
+    else if (haveSpace) (*movements).round[roundNumber].black.push_back(line[i]);
   }
 }
 
 // ---------------------------------
 // catch data from pgn to catcher funtions
 
-void readPgn(const char* pgnFile, gameSet* matchData, playerSet (*moves)[]) {
+void readPgn(const char* pgnFile, GameSet *matchData, MoveSet *movements) {
 
   //associo o arquivo a uma variável e tento abrir ele  
   std::ifstream file(pgnFile);
@@ -79,7 +79,7 @@ void readPgn(const char* pgnFile, gameSet* matchData, playerSet (*moves)[]) {
     while (getline(file, line)) {
       if (line.empty()) moves = true;
       else if (not moves) filterTags(line, matchData);
-      //else if(moves) filterMoves(line);
+      else if(moves) filterMoves(line, movements);
     }
 
     // fecho o arquivo
